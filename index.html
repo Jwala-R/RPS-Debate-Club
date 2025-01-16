@@ -1,1 +1,207 @@
-<h1>RPS Speech and Debate</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speech and Debate Club - Rutgers Prep</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            overflow-x: hidden;
+            height: 100vh;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px 0;
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+        header h1 {
+            font-size: 4rem;
+            color: #fff;
+            letter-spacing: 5px;
+            animation: bounce 1.5s infinite;
+        }
+        header p {
+            font-size: 1.5rem;
+            color: #f1f1f1;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .btn {
+            background-color: #ff7e5f;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .about-section, .events-section {
+            padding: 50px;
+            text-align: center;
+        }
+        .about-section {
+            background-color: #333;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        .about-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+        .events-section {
+            background: #222;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        .events-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .events-list {
+            list-style: none;
+            padding: 0;
+        }
+        .events-list li {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+        .events-list li:hover {
+            transform: scale(1.05);
+            color: #ff7e5f;
+        }
+        footer {
+            background-color: #111;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #bbb;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ff7e5f;
+        }
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff7e5f;
+            padding: 15px 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <header id="home">
+        <h1>Rutgers Prep Speech & Debate</h1>
+        <p>Empowering the voices of tomorrow</p>
+        <a href="#about" class="btn">Learn More</a>
+    </header>
+
+    <section id="about" class="about-section">
+        <h2>About Our Club</h2>
+        <p>The Rutgers Preparatory Speech and Debate Club is dedicated to fostering the critical thinking, speaking, and persuasive skills of its members. We participate in various local and national competitions, helping students gain confidence and expertise in public speaking and debate.</p>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <ul class="events-list">
+            <li>February 2025 - Regional Debate Tournament</li>
+            <li>March 2025 - Statewide Speech Championships</li>
+            <li>April 2025 - Public Speaking Workshop</li>
+            <li>May 2025 - National Debate Finals</li>
+        </ul>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at: kuchar@rutgersprep.org</p>
+        <p>&copy; 2025 Rutgers Preparatory School Speech & Debate Club</p>
+    </footer>
+
+    <div class="scroll-to-top" id="scrollToTop">&#8593;</div>
+
+    <script>
+        // Scroll to Top Button
+        const scrollToTopButton = document.getElementById("scrollToTop");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        };
+        scrollToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
+</body>
+</html>
